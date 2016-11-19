@@ -1,0 +1,13 @@
+
+// FiraSans
+@font-face {
+	@include font ("FiraSans/FiraSans-Light", "FiraSansL", 300, normal);
+}
+
+@font-face {
+	@include font ("FiraSans/FiraSans-Regular", "FiraSansR", 400, normal);
+}
+
+@font-face {
+	@include font ("FiraSans/FiraSans-Medium", "FiraSansM", 500, normal);
+}

@@ -1,0 +1,35 @@
+.introduce {
+  @include clr;
+
+  &__item {
+    width: 49%;
+    margin-right: 18px;
+    float: left;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-wrap {
+      @include clr;
+    }
+  }
+
+  &__pic-wrap, &__content {
+    float: left;
+  }
+
+  &__content {
+    width: 320px;
+    padding: 0 21px;
+  }
+
+  &__text {
+    line-height: 21px;
+  }
+
+  &__link {
+    color: #03a9f4;
+    text-decoration: underline;
+  }
+}

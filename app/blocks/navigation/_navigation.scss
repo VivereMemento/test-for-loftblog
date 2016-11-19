@@ -1,0 +1,62 @@
+.menu {
+  margin-bottom: 75px;
+  padding: 15px 25px;
+  background-color: $green;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  @include clr;
+
+  &__item {
+    width: 50%;
+    float: left;
+  }
+}
+
+.avatar {
+  @include clr;
+
+  &-pic {
+    width: 60px;
+    height: 60px;
+    float: left;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &__link {
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  &-content {
+    padding: 10px 15px;
+    float: left;
+
+    &__name {
+      font: 21px/25px $ffFM;
+      color: #fff;
+      display: block;
+    }
+
+    &__mail {
+      font: 14px/28px $ffFR;
+      color: fade-out(#fff, .3);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &__link {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover,
+      &:visited,
+      &:focus {
+        color: #fff;
+      }
+
+    }
+  }
+}

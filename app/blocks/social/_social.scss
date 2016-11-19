@@ -1,0 +1,30 @@
+.social {
+  margin-top: 20px;
+  float: right;
+
+  &__item {
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+        .social__pic * {
+          opacity: 1;
+        }
+    }
+  }
+
+  &__pic * {
+    fill: #fff;
+    opacity: .8;
+  }
+}

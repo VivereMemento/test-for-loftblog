@@ -1,0 +1,455 @@
+@font-face {
+  font-family: "FiraSansL";
+  src: url("../fonts/FiraSans/FiraSans-Light.eot");
+  src: url("../fonts/FiraSans/FiraSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans/FiraSans-Light.woff") format("woff"), url("../fonts/FiraSans/FiraSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "FiraSansR";
+  src: url("../fonts/FiraSans/FiraSans-Regular.eot");
+  src: url("../fonts/FiraSans/FiraSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans/FiraSans-Regular.woff") format("woff"), url("../fonts/FiraSans/FiraSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "FiraSansM";
+  src: url("../fonts/FiraSans/FiraSans-Medium.eot");
+  src: url("../fonts/FiraSans/FiraSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FiraSans/FiraSans-Medium.woff") format("woff"), url("../fonts/FiraSans/FiraSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*****************************
+  All The Base style
+******************************/
+/* Reset *********************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+ul, ol {
+  list-style: none;
+  font-size: 0;
+  line-height: 0; }
+
+fieldset,
+img {
+  border: none; }
+
+caption,
+th {
+  text-align: left; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input[type="buttom"],
+input[type="submin"],
+input[type="reset"],
+button {
+  cursor: pointer;
+  line-height: normal; }
+
+button,
+input {
+  line-height: normal; }
+
+input[type="hidden"],
+[hidden],
+.hidden {
+  display: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary, .clearfix {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+a > img {
+  vertical-align: bottom; }
+
+strong,
+b {
+  font-weight: bold; }
+
+em,
+i {
+  font-style: italic; }
+
+del {
+  text-decoration: line-through; }
+
+:focus {
+  outline: none; }
+
+/* Base **********************/
+html {
+  width: 100%;
+  height: 100%;
+  background: #fff; }
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "FiraSansL", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -webkit-bsckface-visibility: hidden;
+  background: #fff; }
+
+.page {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.row {
+  *zoom: 1; }
+  .row:after {
+    content: " ";
+    display: table;
+    clear: both; }
+
+[class*="col-"] {
+  padding: 0; }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #324d5b; }
+
+h1, h2, h3 {
+  font-size: 30px;
+  line-height: 40px; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* Base **********************/
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.container {
+  width: 940px;
+  margin: 0 auto; }
+
+.heading-wrap {
+  margin-bottom: 38px;
+  text-align: center; }
+
+.heading {
+  margin-bottom: 20px;
+  font: 500 42px/42px "FiraSansM", Arial, sans-serif;
+  color: #212121; }
+
+.heading-sub {
+  font: 300 21px/21px "FiraSansL", Arial, sans-serif;
+  color: #727272; }
+
+.title-wrap {
+  margin-bottom: 8px; }
+
+.title {
+  font: 400 21px/28px "FiraSansR", Arial, sans-serif;
+  color: #212121; }
+
+.green-curtain {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(140, 195, 75, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1111;
+  display: none; }
+
+.visible {
+  visibility: visible; }
+
+.hidden {
+  visibility: hidden; }
+
+.header__logo__wrap {
+  width: 236px;
+  height: 61px;
+  margin: 0 auto; }
+
+.logo__link {
+  width: 100%;
+  height: 100%;
+  display: block; }
+  .logo__link:hover {
+    text-decoration: none; }
+
+.menu {
+  margin-bottom: 75px;
+  padding: 15px 25px;
+  background-color: #8cc34b;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  *zoom: 1; }
+  .menu:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .menu__item {
+    width: 50%;
+    float: left; }
+
+.avatar {
+  *zoom: 1; }
+  .avatar:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .avatar-pic {
+    width: 60px;
+    height: 60px;
+    float: left;
+    border: 2px solid #fff;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    overflow: hidden; }
+    .avatar-pic__link {
+      text-decoration: none;
+      display: block; }
+  .avatar-content {
+    padding: 10px 15px;
+    float: left; }
+    .avatar-content__name {
+      font: 21px/25px "FiraSansM", Arial, sans-serif;
+      color: #fff;
+      display: block; }
+    .avatar-content__mail {
+      font: 14px/28px "FiraSansR", Arial, sans-serif;
+      color: rgba(255, 255, 255, 0.7); }
+      .avatar-content__mail:hover {
+        color: #fff; }
+    .avatar-content__link {
+      color: #fff;
+      text-decoration: none; }
+      .avatar-content__link:hover, .avatar-content__link:visited, .avatar-content__link:focus {
+        color: #fff; }
+
+.social {
+  margin-top: 20px;
+  float: right; }
+  .social__item {
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: middle; }
+    .social__item:last-child {
+      margin-right: 0; }
+  .social__link {
+    display: block; }
+    .social__link:hover {
+      text-decoration: none; }
+      .social__link:hover .social__pic * {
+        opacity: 1; }
+  .social__pic * {
+    fill: #fff;
+    opacity: .8; }
+
+.header {
+  padding-bottom: 75px; }
+
+.introduce {
+  *zoom: 1; }
+  .introduce:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .introduce__item {
+    width: 49%;
+    margin-right: 18px;
+    float: left; }
+    .introduce__item:last-child {
+      margin-right: 0; }
+    .introduce__item-wrap {
+      *zoom: 1; }
+      .introduce__item-wrap:after {
+        content: " ";
+        display: table;
+        clear: both; }
+  .introduce__pic-wrap, .introduce__content {
+    float: left; }
+  .introduce__content {
+    width: 320px;
+    padding: 0 21px; }
+  .introduce__text {
+    line-height: 21px; }
+  .introduce__link {
+    color: #03a9f4;
+    text-decoration: underline; }
+
+.courses {
+  padding: 75px 0;
+  background: url(../img/gplaypattern.png); }
+  .courses__item {
+    width: 300px;
+    margin: 0 20px 20px 0;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: inline-block;
+    vertical-align: top; }
+    .courses__item:nth-child(3), .courses__item:nth-child(6) {
+      margin-right: 0; }
+    .courses__item-content {
+      padding: 20px;
+      background-color: #fff; }
+  .courses__pic-wrap {
+    position: relative; }
+  .courses__green-line {
+    width: 100%;
+    height: 4px;
+    background-color: #8cc34b;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .courses__title-link {
+    display: block; }
+    .courses__title-link:hover .title {
+      color: #8cc34b; }
+    .courses__title-link:hover .courses__pic-wrap:before {
+      opacity: 1; }
+  .courses__text {
+    font: 14px/21px "FiraSansL", Arial, sans-serif; }
+  .courses__data {
+    margin-top: 10px;
+    font: 14px/14px "Lato", Arial, sans-serif;
+    color: #b6b6b6; }
+
+.fa-clock-o {
+  margin-right: 5px; }
+
+.form-wrap {
+  padding: 20px;
+  background-color: #f6f7f2; }
+
+.checkbox-wrap {
+  margin-right: 15px; }
+
+.label {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 25px; }
+  .label input[type="checkbox"] {
+    display: none; }
+    .label input[type="checkbox"] + .label__text:before {
+      display: inline-block;
+      content: "\f096";
+      margin-right: 10px;
+      color: #ccc;
+      font-family: "FontAwesome";
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      speak: none;
+      line-height: 1;
+      width: 1em;
+      vertical-align: middle; }
+    .label input[type="checkbox"]:checked + .label__text:before {
+      content: "\f14a";
+      color: #8cc34b; }
+    .label input[type="checkbox"]:checked + .label__text {
+      color: #8cc34b; }
+
+.footer {
+  height: 70px;
+  margin-top: -70px;
+  padding: 11px;
+  text-align: center;
+  background-color: #212121;
+  position: relative; }
+  .footer-empty {
+    height: 70px; }
+  .footer__text {
+    color: white;
+    opacity: .5; }

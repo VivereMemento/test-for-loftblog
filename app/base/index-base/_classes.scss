@@ -1,0 +1,56 @@
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.heading-wrap {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font: 500 42px/42px $ffFM;
+  color: $black;
+}
+
+.heading-sub {
+  font: 300 21px/21px $ffFL;
+  color: $grey;
+}
+
+.title-wrap {
+  margin-bottom: 8px;
+}
+
+.title {
+  font: 400 21px/28px $ffFR;
+  color: $black;
+}
+
+.green-curtain {
+  width: 100%;
+  height: 100%;
+  background-color: fade-out($green, .8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1111;
+  display: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
